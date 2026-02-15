@@ -70,4 +70,10 @@ class Raindrops
   autoload :LastDataRecv, 'raindrops/last_data_recv'
   autoload :Watcher, 'raindrops/watcher'
 end
-require 'raindrops_ext'
+
+ruby_version = /(\d+\.\d+)/.match(RUBY_VERSION)
+begin
+  require "#{ruby_version}/raindrops_ext"
+rescue LoadError
+  require 'raindrops_ext'
+end
