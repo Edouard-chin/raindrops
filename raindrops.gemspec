@@ -4,7 +4,7 @@ manifest = File.exist?('.manifest') ?
 test_files = manifest.grep(%r{\Atest/test_.*\.rb\z})
 
 Gem::Specification.new do |s|
-  s.name = %q{raindrops}
+  s.name = %q{precompiled-raindrops}
   s.version = (ENV["VERSION"] ||= '0.18.0').dup
   s.authors = ["raindrops hackers"]
   s.description = File.read('README').split("\n\n")[1]
