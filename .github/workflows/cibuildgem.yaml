@@ -51,6 +51,7 @@ jobs:
         uses: "shopify/cibuildgem/.github/actions/cibuildgem@main"
         with:
           step: "test_${{ matrix.type }}"
+          test-command: "make test-unit"
   install:
     timeout-minutes: 5
     name: "Verify the gem can be installed"
