@@ -12,7 +12,7 @@ jobs:
     timeout-minutes: 20
     name: "Cross compile the gem on different ruby versions"
     env:
-      RUBY_CC_VERSION: "4.0.0:3.4.6:3.3.8"
+      RUBY_CC_VERSION: "3.4.6:3.3.8"
     strategy:
       matrix:
         os: ["macos-latest", "ubuntu-22.04"]
@@ -64,7 +64,7 @@ jobs:
       - name: "Setup Ruby"
         uses: "ruby/setup-ruby@v1"
         with:
-          ruby-version: "4.0.0"
+          ruby-version: "3.4"
       - name: "Run cibuildgem"
         uses: "shopify/cibuildgem/.github/actions/cibuildgem@main"
         with:
